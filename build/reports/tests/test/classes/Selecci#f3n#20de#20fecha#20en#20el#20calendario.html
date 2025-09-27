@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Selección de fecha en el calendario</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Selección de fecha en el calendario</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Selección de fecha en el calendario</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">21.757s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">66%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+<li>
+<a href="#tab3">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="Validación de campo bloqueado"></a>
+<h3 class="failures">Validación de campo bloqueado</h3>
+<span class="code">
+<pre>org.junit.ComparisonFailure: [El campo debería estar bloqueado y no permitir edición] expected:&lt;&quot;[]&quot;&gt; but was:&lt;&quot;[01/01/2025]&quot;&gt;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at co.sqasa.Steps.Steps.intentarEditarCampoFecha(Steps.java:70)
+	at co.sqasa.Steps.Steps$ByteBuddy$9Q9qy1F9.intentarEditarCampoFecha$accessor$xhYjy0qG(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:504)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:484)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:458)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:210)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:197)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
+	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at co.sqasa.Steps.Steps$ByteBuddy$9Q9qy1F9.intentarEditarCampoFecha(Unknown Source)
+	at co.sqasa.StepDef.TestStepDefinition.intentoIngresarFechaManual(TestStepDefinition.java:57)
+	at ✽.intento ingresar una fecha manualmente en el campo de texto(file:///C:/Users/Jonathan/Desktop/Nueva%20carpeta%20(2)/src/test/resources/features/tes.feature:25)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Reserva de una cita seleccionando una fecha en el calendario</td>
+<td class="success">10.165s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Selección de una fecha específica en un mes diferente</td>
+<td class="success">6.825s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">Validación de campo bloqueado</td>
+<td class="failures">4.767s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+@Scenario1
+Scenario: Reserva de una cita seleccionando una fecha en el calendario ?[90m# src/test/resources/features/tes.feature:4?[0m
+  ?[32mGiven ?[0m?[32mque estoy en la página principal de JQuery Datepicker?[0m          ?[90m# co.sqasa.StepDef.TestStepDefinition.queEstoyEnLaPaginaPrincipal()?[0m
+  ?[32mWhen ?[0m?[32mcambio al iframe del calendario?[0m                                 ?[90m# co.sqasa.StepDef.TestStepDefinition.cambioAlIframeDelCalendario()?[0m
+  ?[32mAnd ?[0m?[32mhago clic en el campo de selección de fecha?[0m                      ?[90m# co.sqasa.StepDef.TestStepDefinition.hagoClicEnElCampoDeSeleccionDeFecha()?[0m
+  ?[32mAnd ?[0m?[32mselecciono el día ?[0m?[32m?[1m15?[0m?[32m del mes actual?[0m                              ?[90m# co.sqasa.StepDef.TestStepDefinition.seleccionoElDiaDelMesActual(int)?[0m
+  ?[32mThen ?[0m?[32mla fecha seleccionada debe aparecer en el campo de texto?[0m        ?[90m# co.sqasa.StepDef.TestStepDefinition.laFechaSeleccionadaDebeAparecerEnElCampoDeTexto()?[0m
+
+@Scenario2
+Scenario: Selección de una fecha específica en un mes diferente ?[90m# src/test/resources/features/tes.feature:12?[0m
+  ?[32mGiven ?[0m?[32mque estoy en la página principal de JQuery Datepicker?[0m   ?[90m# co.sqasa.StepDef.TestStepDefinition.queEstoyEnLaPaginaPrincipal()?[0m
+  ?[32mWhen ?[0m?[32mcambio al iframe del calendario?[0m                          ?[90m# co.sqasa.StepDef.TestStepDefinition.cambioAlIframeDelCalendario()?[0m
+  ?[32mAnd ?[0m?[32mhago clic en el campo de selección de fecha?[0m               ?[90m# co.sqasa.StepDef.TestStepDefinition.hagoClicEnElCampoDeSeleccionDeFecha()?[0m
+  ?[32mAnd ?[0m?[32mhago clic en el campo de cambio de mes?[0m                    ?[90m# co.sqasa.StepDef.TestStepDefinition.CambiarMes()?[0m
+  ?[32mAnd ?[0m?[32mselecciono el día ?[0m?[32m?[1m10?[0m?[32m del mes actual?[0m                       ?[90m# co.sqasa.StepDef.TestStepDefinition.seleccionoElDiaDelMesActual(int)?[0m
+  ?[32mThen ?[0m?[32mla fecha seleccionada debe aparecer en el campo de texto?[0m ?[90m# co.sqasa.StepDef.TestStepDefinition.laFechaSeleccionadaDebeAparecerEnElCampoDeTexto()?[0m
+
+@Scenario3
+Scenario: Validación de campo bloqueado                           ?[90m# src/test/resources/features/tes.feature:22?[0m
+  ?[32mGiven ?[0m?[32mque estoy en la página principal de JQuery Datepicker?[0m     ?[90m# co.sqasa.StepDef.TestStepDefinition.queEstoyEnLaPaginaPrincipal()?[0m
+  ?[32mWhen ?[0m?[32mcambio al iframe del calendario?[0m                            ?[90m# co.sqasa.StepDef.TestStepDefinition.cambioAlIframeDelCalendario()?[0m
+  ?[31mAnd ?[0m?[31mintento ingresar una fecha manualmente en el campo de texto?[0m ?[90m# co.sqasa.StepDef.TestStepDefinition.intentoIngresarFechaManual()?[0m
+      ?[31morg.junit.ComparisonFailure: [El campo debería estar bloqueado y no permitir edición] expected:&lt;&quot;[]&quot;&gt; but was:&lt;&quot;[01/01/2025]&quot;&gt;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at co.sqasa.Steps.Steps.intentarEditarCampoFecha(Steps.java:70)
+	at co.sqasa.Steps.Steps$ByteBuddy$9Q9qy1F9.intentarEditarCampoFecha$accessor$xhYjy0qG(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:504)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:484)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:458)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:210)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:197)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:85)
+	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at co.sqasa.Steps.Steps$ByteBuddy$9Q9qy1F9.intentarEditarCampoFecha(Unknown Source)
+	at co.sqasa.StepDef.TestStepDefinition.intentoIngresarFechaManual(TestStepDefinition.java:57)
+	at ✽.intento ingresar una fecha manualmente en el campo de texto(file:///C:/Users/Jonathan/Desktop/Nueva%20carpeta%20(2)/src/test/resources/features/tes.feature:25)
+?[0m
+  ?[36mThen ?[0m?[36mla edición manual no debe ser permitida?[0m                    ?[90m# co.sqasa.StepDef.TestStepDefinition.validacionCampoBloqueado()?[0m
+</pre>
+</span>
+</div>
+<div id="tab3" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/Users/Jonathan/Desktop/Nueva%20carpeta%20(2)/src/test/resources/features/tes.feature
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Reserva de una cita seleccionando una fecha en el calendario(selección-de-fecha-en-el-calendario;reserva-de-una-cita-seleccionando-una-fecha-en-el-calendario)
+--------------------------------------------------------------------------------
+[Test worker] INFO net.thucydides.core.model.TestOutcome - SetUserStory Selección de fecha en el calendario
+[Test worker] INFO net.thucydides.core.model.TestOutcome - SetUserStory Selección de fecha en el calendario
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Not using automatically driver download
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, autodownload: false, browserName: chrome, chrome.driver: drivers/chromedriver.exe, driver: chrome, goog:chromeOptions: {args: [--start-maximized --disable...], extensions: []}, loggingPrefs: org.openqa.selenium.logging..., timeouts.implicitlywait: 10000}
+Starting ChromeDriver 140.0.7339.207 (17230b545fd18b35aad49122e5af97a463bc7a9c-refs/branch-heads/7339@{#2364}) on port 22478
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully on port 22478.
+sept. 26, 2025 7:36:47 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Reserva de una cita seleccionando una fecha en el calendario
+----------------------------------------------------------------------
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/Users/Jonathan/Desktop/Nueva%20carpeta%20(2)/src/test/resources/features/tes.feature
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Selección de una fecha específica en un mes diferente(selección-de-fecha-en-el-calendario;selección-de-una-fecha-específica-en-un-mes-diferente)
+--------------------------------------------------------------------------------
+[Test worker] INFO net.thucydides.core.model.TestOutcome - SetUserStory Selección de fecha en el calendario
+[Test worker] INFO net.thucydides.core.model.TestOutcome - SetUserStory Selección de fecha en el calendario
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Not using automatically driver download
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, autodownload: false, browserName: chrome, chrome.driver: drivers/chromedriver.exe, driver: chrome, goog:chromeOptions: {args: [--start-maximized --disable...], extensions: []}, loggingPrefs: org.openqa.selenium.logging..., timeouts.implicitlywait: 10000}
+Starting ChromeDriver 140.0.7339.207 (17230b545fd18b35aad49122e5af97a463bc7a9c-refs/branch-heads/7339@{#2364}) on port 11327
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully on port 11327.
+sept. 26, 2025 7:36:55 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Selección de una fecha específica en un mes diferente
+----------------------------------------------------------------------
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/Users/Jonathan/Desktop/Nueva%20carpeta%20(2)/src/test/resources/features/tes.feature
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Validación de campo bloqueado(selección-de-fecha-en-el-calendario;validación-de-campo-bloqueado)
+--------------------------------------------------------------------------------
+[Test worker] INFO net.thucydides.core.model.TestOutcome - SetUserStory Selección de fecha en el calendario
+[Test worker] INFO net.thucydides.core.model.TestOutcome - SetUserStory Selección de fecha en el calendario
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Not using automatically driver download
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, autodownload: false, browserName: chrome, chrome.driver: drivers/chromedriver.exe, driver: chrome, goog:chromeOptions: {args: [--start-maximized --disable...], extensions: []}, loggingPrefs: org.openqa.selenium.logging..., timeouts.implicitlywait: 10000}
+Starting ChromeDriver 140.0.7339.207 (17230b545fd18b35aad49122e5af97a463bc7a9c-refs/branch-heads/7339@{#2364}) on port 40028
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully on port 40028.
+sept. 26, 2025 7:37:01 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[Test worker] ERROR  - 
+  _____   ___   ___   _____     ___     _     ___   _      ___   ___  
+ |_   _| | __| / __| |_   _|   | __|   /_\   |_ _| | |    | __| |   \ 
+   | |   | _|  \__ \   | |     | _|   / _ \   | |  | |__  | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___| |____| |___| |___/ 
+
+Validación de campo bloqueado
+-----------------------------------------------------------------------
+[Test worker] ERROR  -     Test failed at step: Intentar ingresar una fecha manualmente en el campo de texto
+[Test worker] ERROR  -     [El campo debería estar bloqueado y no permitir edición] expected:&lt;&quot;[]&quot;&gt; but was:&lt;&quot;[01/01/2025]&quot;&gt;
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.8</a> at 26/09/2025, 7:37:06 p. m.</p>
+</div>
+</div>
+</body>
+</html>

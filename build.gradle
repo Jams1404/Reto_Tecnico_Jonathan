@@ -5,14 +5,14 @@ apply plugin: 'net.serenity-bdd.aggregator'
 repositories {
     mavenLocal()
     mavenCentral()
-    jcenter()
+    //  jcenter()
 }
 
 buildscript {
     repositories {
         mavenLocal()
         mavenCentral()
-        jcenter()
+        //jcenter()
     }
     dependencies {
 
@@ -22,18 +22,21 @@ buildscript {
 
 
 dependencies {
+    testImplementation 'junit:junit:4.13.2'
 
-    implementation 'net.serenity-bdd:serenity-junit:2.0.80'
-    implementation 'net.serenity-bdd:serenity-cucumber:1.9.45'
-    implementation 'net.serenity-bdd:serenity-core:2.0.80'
+    // Serenity principales (traen PageObject)
+    implementation 'net.serenity-bdd:serenity-core:2.6.0'
+    implementation 'net.serenity-bdd:serenity-junit:2.6.0'
+    implementation 'net.serenity-bdd:serenity-cucumber6:2.6.0'
+
+    // Cucumber API para Steps
+    testImplementation 'io.cucumber:cucumber-java:6.10.4'
+    testImplementation 'io.cucumber:cucumber-junit:6.10.4'
+
     implementation 'org.slf4j:slf4j-simple:1.7.7'
     implementation 'com.google.guava:guava:23.0'
     implementation group: 'org.apache.poi', name: 'poi', version: '3.17'
     implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '3.17'
-
-
-
-
 }
 
 
